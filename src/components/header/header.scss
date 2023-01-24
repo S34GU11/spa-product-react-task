@@ -1,20 +1,26 @@
 header {
+  display: flex;
+  flex-direction: row;
   height: 78px;
-  width: 1560px;
+  width: 100%;
   background-color: #022B32;
-  padding: 23px;
 
-  a {
+  .logo {
+    display: inline-block;
+    padding: 25px 50px 25.7px 20px;
+  }
+
+  .link-page {
     display: inline-block;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     color: #FFFFFF;
-    margin: 0 20px;
+    padding: 26.65px 50px 27.35px 0;
     text-decoration: none;
   }
 
-  a:active{
+  .link-page:focus{
     text-decoration: underline;
   }
 }

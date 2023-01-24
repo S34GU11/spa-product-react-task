@@ -1,17 +1,19 @@
 import './productsListItem.scss'
 
-const ProductsListItem = () => {
+const ProductsListItem = (props) => {
 
+
+    const { itemImg, itemTitle, itemDesc } = props
 
     return (
        <>
            <div className="item">
-               <img src="" alt="" className="item-img"/>
-               <div className="item-description">
-                   <h4 className="item-title">Hardost</h4>
-                   <p className="item-description-text">
-                       Arnaud Comte AOP exlagrad opas 35% hardost
-                   </p>
+               <img src={itemImg}
+                    alt="product"
+                    className="item__img"/>
+               <div className="item__description description">
+                   <h4 className="description__title">{itemTitle}</h4>
+                   <p className="description__text">{itemDesc}...</p>
                </div>
            </div>
        </>

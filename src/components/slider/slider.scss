@@ -1,5 +1,53 @@
-.slider {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
+.alice-carousel {
+  width: 1331px;
+  margin: 0;
+
+  &__next-btn,
+  &__prev-btn {
+    position: absolute;
+    top: 208px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: #F8F8F8;
+    color: #757575;
+    font-weight: 700;
+    font-size: 24px;
+    box-shadow: 0px 3.4px 17px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
+  &__prev-btn {
+    left: -34px;
+  }
+
+  &__next-btn {
+    right: -34px;
+  }
+
+  &__stage-item {
+    max-width: 421px !important;
+    margin: 0 17px;
+  }
+
+  &__stage-item:first-child {
+    margin-left: 0;
+  }
+
+}
+
+.alice-carousel__prev-btn-item,
+.alice-carousel__next-btn-item {
+  color: #757575;
+}
+
+.alice-carousel__prev-btn-item:hover,
+.alice-carousel__next-btn-item:hover {
+  color: #757575;
 }

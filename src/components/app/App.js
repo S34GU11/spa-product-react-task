@@ -1,18 +1,37 @@
-import './App.scss';
+import {Suspense} from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom"
+
 import Header from "../header/Header";
 import HomePage from "../pages/HomePage";
-import ProductPage from "../pages/ProductPage";
+import ProductListPage from "../pages/ProductListPage";
+import Footer from "../footer/Footer";
+import Spinner from "../spiner/Spinner";
+
+import './App.scss';
+
 
 function App() {
   return (
-    <div className="wrapper">
-      <Header></Header>
-        <main>
-          {/*<HomePage></HomePage>*/}
-          <ProductPage></ProductPage>
-        </main>
-        <footer>2023 © COPYRIGHT</footer>
-    </div>
+     <Router>
+         <div className="wrapper">
+             <Header/>
+             <main>
+                 <Suspense fallback={<Spinner/>}>
+                     <Routes>
+                         <Route path="/"
+                                element={<HomePage/>}/>
+                         <Route path="/productList"
+                                element={<ProductListPage/>}/>
+                     </Routes>
+                 </Suspense>
+             </main>
+             <Footer/>
+         </div>
+     </Router>
   );
 }
 
