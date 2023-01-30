@@ -22,14 +22,15 @@ const Slider = props => {
        <>
            {
                <AliceCarousel
-                  items={sliderItems}
-                  disableDotsControls
-                  keyboardNavigation
-                  responsive={
+                   mouseTracking
+                   items={sliderItems}
+                   disableDotsControls
+                   keyboardNavigation
+                   responsive={
                       {
                           0: {
                               items: 3,
-                              itemsFit: "contain"
+                              itemsFit: 'contain',
                           }
                       }
                   }/>

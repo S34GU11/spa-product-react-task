@@ -12,12 +12,10 @@
   min-height: 100vh;
 
   main {
-    max-width: 1560px;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
     justify-content: center;
-    padding: 40px 20px 41px 20px;
 
     h1 {
       font-weight: 700;
@@ -28,11 +26,16 @@
     }
 
     .products-list-block {
+      padding: 40px 20px 81px 20px;
       &__content {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 40px;
+
+        .item {
+          //max-width: 350px;
+        }
       }
     }
   }
