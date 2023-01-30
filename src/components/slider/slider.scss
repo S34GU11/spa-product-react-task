@@ -6,6 +6,7 @@
 
   &__next-btn,
   &__prev-btn {
+    content: '❯';
     position: absolute;
     top: 208px;
     z-index: 1000;
@@ -27,8 +28,16 @@
     left: -34px;
   }
 
+  &__prev-btn [data-area]::after {
+    content: '❮';
+  }
+
   &__next-btn {
     right: -34px;
+  }
+
+  &__next-btn [data-area]::after {
+    content: '❯';
   }
 
   &__stage-item {

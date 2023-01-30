@@ -27,19 +27,21 @@ const ProductListPage = () => {
            {
                loading ? <Spinner/> :
               <>
-                  <h1>Product Page</h1>
                   <div className="products-list-block">
-                      {
-                          productItems.map((item, i) => {
-                              return (
-                                 <ProductsListItem
-                                    key={i}
-                                    itemTitle={item.title.slice(0, 20)}
-                                    itemImg={item.image}
-                                    itemDesc={item.description.slice(0, 60)}/>
-                              )
-                          })
-                      }
+                      <h1 className="products-list-block__title">Product Page</h1>
+                      <div className="products-list-block__content">
+                          {
+                              productItems.map((item, i) => {
+                                  return (
+                                      <ProductsListItem
+                                          key={i}
+                                          itemTitle={item.title.slice(0, 20)}
+                                          itemImg={item.image}
+                                          itemDesc={item.description.slice(0, 60)}/>
+                                  )
+                              })
+                          }
+                      </div>
                   </div>
               </>
            }
