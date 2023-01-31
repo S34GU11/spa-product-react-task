@@ -1,6 +1,6 @@
 import './productsListItem.scss'
 
-const ProductsListItem = (props) => {
+const ProductsListItem = props => {
 
 
     const { itemImg, itemTitle, itemDesc } = props
