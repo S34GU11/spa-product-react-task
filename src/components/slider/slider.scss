@@ -63,7 +63,13 @@
 
 @media (max-width: 1400px) {
   .alice-carousel {
-    width: 876px;
+    width: 886px;
+  }
+}
+
+@media (max-width: 910px) {
+  .alice-carousel {
+    width: 486px;
   }
 }
 

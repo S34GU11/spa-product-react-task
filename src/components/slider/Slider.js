@@ -30,11 +30,14 @@ const Slider = props => {
                    responsive={
                       {
                           0: {
-                              items: 2,
+                              items: 1,
+                          },
+                          1024: {
+                              items: 2
                           },
                           1460: {
                               items: 3,
-                              itemsFit: "contain"
+                              // itemsFit: "contain"
                           }
                       }
                   }/>
