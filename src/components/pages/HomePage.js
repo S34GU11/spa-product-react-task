@@ -21,10 +21,12 @@ const HomePage = () => {
        <>
            {
                loading ? <Spinner/> :
-                  <>
-                      <h1>Home Page</h1>
-                      <Slider products={sliderItems}></Slider>
-                  </>
+                  <div className="home-slider-block">
+                      <h1 className="home-slider-block__title">Home Page</h1>
+                      <div className="home-slider-block__slider">
+                          <Slider products={sliderItems}></Slider>
+                      </div>
+                  </div>
            }
        </>
     )

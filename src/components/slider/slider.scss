@@ -1,15 +1,18 @@
 @import "react-alice-carousel/lib/scss/alice-carousel.scss";
 
 .alice-carousel {
-  width: 1331px !important;
   margin: 0;
+  width: 1331px;
 
   &__stage-item {
-    width: 421px !important;
-    margin-right: 34px;
 
     .item {
-      max-width: inherit;
+      max-width: 100%;
+      margin: 0 34px 0 0;
+
+      &__img {
+        max-width: 230px;
+      }
     }
   }
 
@@ -29,7 +32,6 @@
     font-weight: 700;
     font-size: 24px;
     box-shadow: 0 3.4px 17px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
   }
 
   &__prev-btn [data-area]::after {
@@ -45,36 +47,23 @@
   }
 
   &__next-btn {
-    right: -34px;
+    right: 0;
   }
 
   &__prev-btn-item,
   &__next-btn-item {
     color: #757575;
-  }
 
-  &__prev-btn-item:hover,
-  &__next-btn-item:hover {
-    color: #757575;
+    &:hover {
+      color: #757575;
+    }
   }
 }
+
 
 @media (max-width: 1400px) {
   .alice-carousel {
-    width: 1131px !important;
-
-    &__stage-item {
-      width: 354px !important;
-    }
+    width: 876px;
   }
 }
 
-@media (max-width: 1200px) {
-  .alice-carousel {
-    width: 1031px !important;
-
-    &__stage-item {
-      width: 321px !important;
-    }
-  }
-}

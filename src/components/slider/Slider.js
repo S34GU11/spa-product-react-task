@@ -26,11 +26,15 @@ const Slider = props => {
                    items={sliderItems}
                    disableDotsControls
                    keyboardNavigation
+                   // autoWidth={true}
                    responsive={
                       {
                           0: {
+                              items: 2,
+                          },
+                          1460: {
                               items: 3,
-                              itemsFit: 'contain',
+                              itemsFit: "contain"
                           }
                       }
                   }/>
